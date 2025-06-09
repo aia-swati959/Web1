@@ -125,3 +125,16 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Logged out successfully");
   });
 });
+// gtag event
+gtag('event', 'contact_form_submission', {
+                event_category: 'Contact Form',
+                event_label: subject,
+                value: 1, // Optional metric
+                user_name: name,
+                user_email: email,
+                user_message: message,
+                product_id: productId,
+                product_rating: productRating,
+                user_uploads: attachment ? attachment.name : 'No file uploaded',
+                submission_count: 1
+            });
