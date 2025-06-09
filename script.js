@@ -62,6 +62,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('.contact-form');
+
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form reload
+
+        // Get input values
+        const productId = document.getElementById('product-id').value;
+        const productRating = document.getElementById('product-rating').value;
+
+        // Log values
+        console.log(`Product ID: ${productId}`);
+        console.log(`Product Rating: ${productRating}`);
+    });
+});
+
 
 
 
