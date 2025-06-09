@@ -1,15 +1,27 @@
-function showPopup(productName){
-    alert("Product Id" + productName +"has been added to your cart!");}
-    document.addEventListener("DOMContentLoaded", function(){
-    const buttons = document.querySelectorAll(".add-to-cart-btn");
-    buttons.forEach(button=>{
-        button.addEventListener("click", function(){
-            const productName = button.getAttribute("data-product-id");
-            showPopup(productName);
-        });
-        )};
-)};
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('.contact-form');
 
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevents page reload
+
+        // Get input values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        const attachment = document.getElementById('attachment').files[0];
+
+        console.log("Form Submitted!");
+        console.log(`Name: ${name}`);
+        console.log(`Email: ${email}`);
+        console.log(`Subject: ${subject}`);
+        console.log(`Message: ${message}`);
+
+        if (attachment) {
+            console.log(`File Uploaded: ${attachment.name}`);
+        }
+    });
+});
     document.addEventListener('DOMContentLoaded',()=>{
     const addToCartButtons = 
     document.querySelectorAll('.add-to-cart-btn');
@@ -24,7 +36,7 @@ function showPopup(productName){
     addToCartButtons.forEach(button =>{
          button.addEventListener('click',() => {
             const productId = button.dataset.productId;
-            console.log('Product ${productId} added to Cart');
+            console.log(`Product ${productId} added to Cart`);
             cartItemCount++;
             updateCartCount();
             button.textContent ="Added!";
