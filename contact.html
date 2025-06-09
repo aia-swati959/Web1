@@ -48,6 +48,16 @@
                                 <textarea id="message" name="message" rowspan="6" ></textarea>
                             </div>
                             <div class="form-group">
+    <label for="product-id">Product ID (1-6):</label>
+    <input type="number" id="product-id" name="product-id" min="1" max="6" required>
+</div>
+
+<div class="form-group">
+    <label for="product-rating">Product Rating (1-10):</label>
+    <input type="number" id="product-rating" name="product-rating" min="1" max="10" required>
+</div>
+
+                            <div class="form-group">
                                 <label for="attachment">Upload FILE(Optional)</label>
                                 <input type="file" id="attachment" name="attachment" required>
                             </div>
