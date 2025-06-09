@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded',()=>{
+function showPopup(productName){
+    alert(productName = "has been added to your cart!");}
+    document.addEventListener('DOMContentLoaded',()=>{
     const addToCartButtons = 
     document.querySelectorAll('.add-to-cart-btn');
     const cartCountSpan =
