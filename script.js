@@ -1,5 +1,15 @@
 function showPopup(productName){
-    alert(productName = "has been added to your cart!");}
+    alert("Product Id" + productName +"has been added to your cart!");}
+    document.addEventListener("DOMContentLoaded", function(){
+    const buttons = document.querySelectorAll(".add-to-cart-btn");
+    buttons.forEach(button=>{
+        button.addEventListener("click", function(){
+            const productName = button.getAttribute("data-product-id");
+            showPopup(productName);
+        });
+        )};
+)};
+
     document.addEventListener('DOMContentLoaded',()=>{
     const addToCartButtons = 
     document.querySelectorAll('.add-to-cart-btn');
