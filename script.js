@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
+        const productId = document.getElementById('product-id').value;
+        const productRating = document.getElementById('product-rating').value;
         const attachment = document.getElementById('attachment').files[0];
 
         console.log("Form Submitted!");
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`Email: ${email}`);
         console.log(`Subject: ${subject}`);
         console.log(`Message: ${message}`);
+        console.log(`Product ID (1-6): ${productId}`);
+        console.log(`Product Rating (1-10): ${productRating}`);
 
         if (attachment) {
             console.log(`File Uploaded: ${attachment.name}`);
