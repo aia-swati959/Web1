@@ -138,3 +138,19 @@ gtag('event', 'contact_form_submission', {
                 user_uploads: attachment ? attachment.name : 'No file uploaded',
                 submission_count: 1
             });
+
+document.addEventListener("DOMContentLoaded", function(){
+    const ratingInput = document.getElementById("product-rating");
+    if(ratingInput){
+        ratingInput.addEventListener("change", function(){
+            window.dataLayer = window.dataLayer|| [];
+             window.dataLayer.push({
+                 event: "product_rating_given",
+                 rating:ratingInput.value,
+                 productId:
+            document.getElementById("product-id")?.value||""});
+        });
+    }
+});
+
+            
